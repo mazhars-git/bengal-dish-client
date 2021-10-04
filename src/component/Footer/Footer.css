@@ -1,0 +1,27 @@
+.footer-area{
+    background-color: black;
+    min-height: 100px;
+    color: #fff;
+}
+.footer-list, .footer-icon, .footer-list-3{
+    padding: 0;
+}
+
+.footer-list li, .footer-icon, .footer-list-3{
+    list-style: none;
+    text-align: left;
+    margin: 5px 0;
+    font-weight: 300;
+}
+.footer-list li a, .footer-list-3 li a{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+.footer-list-3{
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-icon li a{
+    text-decoration: none !important;
+    color: #e51a4b !important;
+}
