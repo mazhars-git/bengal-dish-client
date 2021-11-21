@@ -7,11 +7,11 @@ import {
   Link
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './component/Header/Header';
-import MainMenu from './component/MainMenu/MainMenu';
-import Home from './component/Home/Home';
-import Footer from './component/Footer/Footer';
-import Description from './component/Description/Description';
+import Header from './Components/Header/Header';
+import MainMenu from './Components/MainMenu/MainMenu';
+import Home from './Components/Home/Home';
+import Footer from './Components/Footer/Footer';
+import Description from './Components/Description/Description';
 
 
 function App() {
