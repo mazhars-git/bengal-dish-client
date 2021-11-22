@@ -17,11 +17,7 @@ import Description from './Components/Description/Description';
 function App() {
   return (
     <div className="App">
-      <MainMenu></MainMenu>
-      <Header></Header>
       <Home></Home>
-      <Description></Description>
-      <Footer></Footer>
     </div>
   );
 }
