@@ -1,10 +1,10 @@
 import './App.css';
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  BrowserRouter,
+  Router,
+  Routes,
+  Route
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
@@ -16,8 +16,8 @@ import Description from './Components/Description/Description';
 
 function App() {
   return (
-    <div className="App">
-      <Home></Home>
+    <div>
+       <Home />
     </div>
   );
 }
