@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import {
-  BrowserRouter,
+  BrowserRouter as 
   Router,
   Routes,
   Route
@@ -16,9 +16,12 @@ import Description from './Components/Description/Description';
 
 function App() {
   return (
-    <div>
-       <Home />
-    </div>
+    <Routes>
+      
+        <Route path="/home" component={Home} />
+        <Route path="/about" component={Home} />
+        
+    </Routes>
   );
 }
 
