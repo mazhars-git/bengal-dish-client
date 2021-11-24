@@ -1,9 +1,15 @@
 import React from 'react';
+import { Image } from 'react-bootstrap';
 
-const BreakFastData = () => {
+const BreakFastData = (props) => {
+    const {image, item} = props.data;
+
+    console.log(image)
+
     return (
-        <div>
-            
+        <div className="col-md-4 text-center">
+            <Image src={image} alt="breakfast" fluid />
+            <h4>{item}</h4>
         </div>
     );
 };

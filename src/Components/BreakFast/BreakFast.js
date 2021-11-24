@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import break_fast from '../../FakeData/breakfast.json';
 import BreakFastData from '../BreakFast/BreakFastData';
 
@@ -8,13 +9,18 @@ const BreakFast = () => {
     useEffect(() => {
        setBreakFast(break_fast);
     }, [])
-
+    console.log(breakFast);
     return (
         <section>
-            <h1>Breakfast Area</h1>
-            {
-                breakFast.map(data => <BreakFastData data={data}></BreakFastData>)
-            }
+            <Container>
+
+                <h1>Breakfast Area</h1>
+                <Row>
+                    {
+                        breakFast.map(data => <BreakFastData data={data}></BreakFastData>)
+                    }
+                </Row>
+            </Container>
         </section>
     );
 };
