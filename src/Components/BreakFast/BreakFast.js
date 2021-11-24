@@ -11,6 +11,7 @@ const BreakFast = () => {
 
     return (
         <section>
+            <h1>Breakfast Area</h1>
             {
                 breakFast.map(data => <BreakFastData data={data}></BreakFastData>)
             }

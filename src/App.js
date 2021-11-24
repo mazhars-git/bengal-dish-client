@@ -7,20 +7,15 @@ import {
   Route
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header/Header';
-import MainMenu from './Components/MainMenu/MainMenu';
 import Home from './Components/Home/Home';
-import Footer from './Components/Footer/Footer';
-import Description from './Components/Description/Description';
+import BreakFast from './Components/BreakFast/BreakFast';
 
 
 function App() {
   return (
     <Routes>
-      
-        <Route path="/home" component={Home} />
-        <Route path="/about" component={Home} />
-        
+      <Route path="/" element={<Home />} />
+      <Route path="/breakFast" element={<BreakFast />} />
     </Routes>
   );
 }
