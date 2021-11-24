@@ -9,6 +9,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Components/Home/Home';
 import BreakFast from './Components/BreakFast/BreakFast';
+import Lunch from './Components/Lunch/Lunch';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/breakfast" element={<BreakFast />} />
+      <Route path="/lunch" element={<Lunch />} />
     </Routes>
   );
 }
