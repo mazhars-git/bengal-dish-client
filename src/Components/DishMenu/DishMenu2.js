@@ -64,11 +64,12 @@ const DishMenu2 = () => {
         <div className={classes.root}>
         <AppBar position="static">
             <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-            <Tab label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
+            <Tab label="Breakfast" {...a11yProps(0)} />
+            <Tab label="Lunch" {...a11yProps(1)} />
+            <Tab label="Dinner" {...a11yProps(2)} />
             </Tabs>
         </AppBar>
+       
         <TabPanel value={value} index={0}>
             <BreakFast />
         </TabPanel>
@@ -78,6 +79,7 @@ const DishMenu2 = () => {
         <TabPanel value={value} index={2}>
             <Dinner />
         </TabPanel>
+       
     </div>
     );
 };

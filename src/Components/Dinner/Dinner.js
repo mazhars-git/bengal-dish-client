@@ -12,7 +12,6 @@ const Dinner = () => {
 
     return (
         <Container>
-            <h4>This Dinner Section</h4>
             <Row>
                 {
                     dinner.map(dishInfo => <DinnerData data={dishInfo}></DinnerData>)

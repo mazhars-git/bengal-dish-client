@@ -12,7 +12,6 @@ const Lunch = () => {
 
     return (
         <Container> 
-            <h2>Lunch Dishes</h2>
             <Row>
                 {
                     lunch.map(info => <LunchData data={info}></LunchData>)
