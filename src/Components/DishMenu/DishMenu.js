@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     width: '70%',
     margin: 'auto'
-  },
+  }
 }));
 
 
@@ -68,6 +68,7 @@ const DishMenu = () => {
   
     return (
         <div className={classes.root}>
+            <Box pt={5}/>
             <AppBar position="static" color="default">
                 <Tabs
                     value={value}
