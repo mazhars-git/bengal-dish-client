@@ -4,9 +4,11 @@ import { Image } from 'react-bootstrap';
 const DinnerData = (props) => {
     const {image, item} = props.data;
     return (
-        <div className="col-md-4 text-center">
-            <Image src={image} fluid/>
-            <h4>{item}</h4>
+        <div className="col-md-4">
+            <div className="content-box">
+                <Image src={image} fluid/>
+                <h6>{item}</h6>
+            </div>
         </div>
     );
 };
