@@ -9,6 +9,7 @@ import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
 import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     root: {
@@ -21,37 +22,42 @@ const Sidebar = () => {
     const classes = useStyles();
     return (
         <Paper className={classes.root}>
-      <MenuList>
-        <MenuItem>
-          <ListItemIcon>
-            <SendIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit">Add Product</Typography>
-        </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <PriorityHighIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit">Manage Product</Typography>
-        </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <DraftsIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit" noWrap>
-                Management
-          </Typography>
-        </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <ExitToAppIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit">
-                Back
-          </Typography>
-        </MenuItem>
-      </MenuList>
-    </Paper>
+            <MenuList>
+                <MenuItem>
+                    <ListItemIcon>
+                        <SendIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="inherit">Add Product</Typography>
+                </MenuItem>
+                
+                <MenuItem>
+                    <ListItemIcon>
+                        <PriorityHighIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="inherit">Manage Product</Typography>
+                </MenuItem>
+                
+                <MenuItem>
+                    <ListItemIcon>
+                        <DraftsIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="inherit" noWrap>
+                            Management
+                    </Typography>
+                </MenuItem>
+                
+                <MenuItem>
+                    <Link to="/">
+                        <ListItemIcon>
+                            <ExitToAppIcon fontSize="small" />
+                        </ListItemIcon>
+                        <Typography variant="inherit">
+                            Back
+                        </Typography>
+                    </Link>
+                </MenuItem>
+            </MenuList>
+        </Paper>
     );
 };
 

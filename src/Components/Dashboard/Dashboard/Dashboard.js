@@ -9,7 +9,7 @@ const Dashboard = () => {
                     <Sidebar />
                 </div>
                 <div className="col-md-9">
-                    <h1>Dashboard Area</h1>
+                    <h3>Dashboard Area</h3>
                 </div>
             </div>
             
