@@ -17,6 +17,7 @@ const MainMenu = () => {
                     >
                         <Nav.Link href="/home">Home</Nav.Link>
                         <Nav.Link href="/menu">Menu</Nav.Link>
+                        <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav>
 
