@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import SendIcon from '@material-ui/icons/Send';
 import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles({
     root: {
@@ -25,20 +26,28 @@ const Sidebar = () => {
           <ListItemIcon>
             <SendIcon fontSize="small" />
           </ListItemIcon>
-          <Typography variant="inherit">A short message</Typography>
+          <Typography variant="inherit">Add Product</Typography>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
             <PriorityHighIcon fontSize="small" />
           </ListItemIcon>
-          <Typography variant="inherit">A very long text that overflows</Typography>
+          <Typography variant="inherit">Manage Product</Typography>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
             <DraftsIcon fontSize="small" />
           </ListItemIcon>
           <Typography variant="inherit" noWrap>
-            A very long text that overflows
+                Management
+          </Typography>
+        </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <ExitToAppIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit">
+                Back
           </Typography>
         </MenuItem>
       </MenuList>
