@@ -4,12 +4,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListIcon from '@material-ui/icons/List';
 import Typography from '@material-ui/core/Typography';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
 import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { Link } from 'react-router-dom';
+import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles({
     root: {
@@ -25,31 +25,22 @@ const Sidebar = () => {
             <MenuList>
                 <MenuItem>
                     <ListItemIcon>
-                        <SendIcon fontSize="small" />
+                        <AddIcon color="secondary" fontSize="medium" />
                     </ListItemIcon>
                     <Typography variant="inherit">Add Product</Typography>
                 </MenuItem>
                 
                 <MenuItem>
                     <ListItemIcon>
-                        <PriorityHighIcon fontSize="small" />
+                        <ListIcon color="secondary" fontSize="medium" />
                     </ListItemIcon>
                     <Typography variant="inherit">Manage Product</Typography>
                 </MenuItem>
-                
-                <MenuItem>
-                    <ListItemIcon>
-                        <DraftsIcon fontSize="small" />
-                    </ListItemIcon>
-                    <Typography variant="inherit" noWrap>
-                            Management
-                    </Typography>
-                </MenuItem>
-                
+
                 <MenuItem>
                     <Link to="/">
                         <ListItemIcon>
-                            <ExitToAppIcon fontSize="small" />
+                            <ExitToAppIcon color="secondary" fontSize="medium" />
                         </ListItemIcon>
                         <Typography variant="inherit">
                             Back
