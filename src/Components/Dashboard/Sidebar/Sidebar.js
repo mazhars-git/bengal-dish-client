@@ -24,10 +24,12 @@ const Sidebar = () => {
         <Paper className={classes.root}>
             <MenuList>
                 <MenuItem>
-                    <ListItemIcon>
-                        <AddIcon color="secondary" fontSize="medium" />
-                    </ListItemIcon>
-                    <Typography variant="inherit">Add Product</Typography>
+                    <Link to="/addItem">
+                        <ListItemIcon>
+                            <AddIcon color="secondary" fontSize="medium" />
+                        </ListItemIcon>
+                        <Typography variant="inherit">Add Item</Typography>
+                    </Link>
                 </MenuItem>
                 
                 <MenuItem>

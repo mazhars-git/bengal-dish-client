@@ -1,26 +1,28 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import { useForm } from "react-hook-form";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: '25ch',
-    },
-  },
-}));
+import "../../Css/HookForm.css";
 
 const AddItem = () => {
-    const classes = useStyles();
-    return (
-        <form className={classes.root} noValidate autoComplete="off">
-            <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-            <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-            <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-            <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        </form>
-    );
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+
+  console.log(watch("example")); // watch input value by passing the name of it
+
+  return (
+    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {/* register your input into the hook by invoking the "register" function */}
+      <input defaultValue="test" {...register("example")} />
+      
+      {/* include validation with required or other standard HTML validation rules */}
+      <input {...register("exampleRequired", { required: true })} />
+      {/* errors will return when field validation fails  */}
+      {errors.exampleRequired && <span>This field is required</span>}
+      
+      <input type="submit" />
+    </form>
+  );
 };
 
 export default AddItem;
