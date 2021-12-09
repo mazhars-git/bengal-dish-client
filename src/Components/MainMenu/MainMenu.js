@@ -15,7 +15,7 @@ const MainMenu = () => {
                         style={{ maxHeight: '100px'}}
                         navbarScroll
                     >
-                        <Nav.Link href="/home">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/menu">Menu</Nav.Link>
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>

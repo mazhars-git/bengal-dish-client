@@ -6,10 +6,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListIcon from '@material-ui/icons/List';
 import Typography from '@material-ui/core/Typography';
-import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { Link } from 'react-router-dom';
 import AddIcon from '@material-ui/icons/Add';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 
 const useStyles = makeStyles({
     root: {
@@ -23,6 +23,14 @@ const Sidebar = () => {
     return (
         <Paper className={classes.root}>
             <MenuList>
+                <MenuItem>
+                    <Link to="/addItem">
+                        <ListItemIcon>
+                            <DashboardIcon color="secondary" fontSize="medium" />
+                        </ListItemIcon>
+                        <Typography variant="inherit">Dashboard</Typography>
+                    </Link>
+                </MenuItem>
                 <MenuItem>
                     <Link to="/addItem">
                         <ListItemIcon>
