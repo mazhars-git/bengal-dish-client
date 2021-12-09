@@ -1,27 +1,47 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
+import Sidebar from '../Sidebar/Sidebar';
 
 import "../../Css/HookForm.css";
 
 const AddItem = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-
-  console.log(watch("example")); // watch input value by passing the name of it
+  
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue="test" {...register("example")} />
-      
-      {/* include validation with required or other standard HTML validation rules */}
-      <input {...register("exampleRequired", { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
-      
-      <input type="submit" />
-    </form>
+    <section>
+      <div className="container my-5">
+        <div className="row">
+          <div className="col-md-4">
+              <Sidebar />
+          </div>
+          
+          <div className="col-md-8">
+              <form class="row g-3">
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Item Name</label>
+                    <input type="email" class="form-control" id="inputEmail4" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Item Price</label>
+                    <input type="number" class="form-control" id="inputPassword4" />
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" /> 
+                  </div>
+                  
+                  <div class="mb-3 col-md-6">
+                    <label for="formFile" class="form-label">Default file input example</label><br/>
+                    <input type="file" id="formFile" />
+                  </div>
+
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
