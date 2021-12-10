@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from '../../images/logo2.png';
+import '../Css/Login.css';
 
 const Login = () => {
     return (
-        <section className="login-area container">
-            <div>
+        <section className="login-area">
+            <div className="container w-25 m-auto py-5">
                 <img src={logo} style={{width: '120px'}} alt="" />
 
                 <div class="my-3">
