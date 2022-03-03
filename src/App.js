@@ -14,6 +14,7 @@ import Dinner from './Components/Dinner/Dinner';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import AddItem from './Components/Dashboard/AddItem/AddItem';
 import Login from './Components/Login/Login';
+import CheckOut from './Components/CheckOut/CheckOut';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path="/breakfast" element={<BreakFast />} />
       <Route path="/lunch" element={<Lunch />} />
       <Route path="/dinner" element={<Dinner />} />
+      <Route path="/checkout" element={<CheckOut />} />
     </Routes>
   );
 }
