@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 
-const Dashboard = () => {
+const ManagePd = () => {
     return (
         <div className="container">
             <div className="row pt-5">
@@ -9,12 +9,11 @@ const Dashboard = () => {
                     <Sidebar />
                 </div>
                 <div className="col-md-9">
-                    <h3>Dashboard Area</h3>
+                    <h3>Admin Area</h3>
                 </div>
             </div>
-            
         </div>
     );
 };
 
-export default Dashboard;
+export default ManagePd;

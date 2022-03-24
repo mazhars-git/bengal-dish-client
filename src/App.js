@@ -15,6 +15,7 @@ import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import AddItem from './Components/Dashboard/AddItem/AddItem';
 import Login from './Components/Login/Login';
 import CheckOut from './Components/CheckOut/CheckOut';
+import ManagePd from './Components/Dashboard/ManagePd/ManagePd';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/managePd" element={<ManagePd />} />
       <Route path="/addItem" element={<AddItem />} />
       <Route path="/breakfast" element={<BreakFast />} />
       <Route path="/lunch" element={<Lunch />} />

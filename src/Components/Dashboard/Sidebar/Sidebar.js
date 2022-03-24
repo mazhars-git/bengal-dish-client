@@ -24,7 +24,7 @@ const Sidebar = () => {
         <Paper className={classes.root}>
             <MenuList>
                 <MenuItem>
-                    <Link to="/addItem">
+                    <Link to="/dashboard">
                         <ListItemIcon>
                             <DashboardIcon color="secondary" fontSize="medium" />
                         </ListItemIcon>
@@ -41,10 +41,12 @@ const Sidebar = () => {
                 </MenuItem>
                 
                 <MenuItem>
+                    <Link to="/managePd">
                     <ListItemIcon>
                         <ListIcon color="secondary" fontSize="medium" />
                     </ListItemIcon>
                     <Typography variant="inherit">Manage Product</Typography>
+                    </Link>
                 </MenuItem>
 
                 <MenuItem>
