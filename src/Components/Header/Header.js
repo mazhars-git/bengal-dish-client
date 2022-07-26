@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <div className="header-area">
             <div className="content">
-                <h1>Best Food Waiting For Your Belly</h1>
+                <h1 className="text-center py-4">Best Food Waiting For Your Belly</h1>
                 <InputGroup style={{width: '30%', margin: 'auto'}} className="mb-3">
                     <FormControl
                         placeholder="Your best recipe"
