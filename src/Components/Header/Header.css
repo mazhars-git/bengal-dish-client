@@ -7,3 +7,18 @@
     padding: 150px 0;
     color: #fff;
 }
+.searchBtn{
+    border-start-start-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #ef233c;
+    border-color: #ef233c;
+    color: #fff;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.searchBtn:hover{
+    background-color: #00bbf9;
+    border-color: #00bbf9;
+    color: #fff;
+}
