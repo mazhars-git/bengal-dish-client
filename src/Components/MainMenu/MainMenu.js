@@ -6,7 +6,7 @@ import Logo from '../../images/logo2.png';
 const MainMenu = () => {
     return (
         <div>
-            <Navbar fixed="top" bg="dark" expand="lg">
+            <Navbar fixed="top" bg="light" expand="lg">
             <Navbar.Brand href="#"><Image src={Logo} style={{ width: '10rem' }}/></Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -19,6 +19,7 @@ const MainMenu = () => {
                         <Nav.Link href="/menu">Menu</Nav.Link>
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
+                        <Nav.Link href="/login">Login</Nav.Link>
                     </Nav>
 
                 </Navbar.Collapse>
