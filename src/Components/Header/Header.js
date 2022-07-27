@@ -3,12 +3,15 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import '../Css/Header.css';
 import { FormControl, InputGroup } from 'react-bootstrap';
+import 'animate.css';
 
 const Header = () => {
     return (
         <div className="header-area">
             <div className="content">
-                <h1 className="text-center py-4">Best Food Waiting For Your Belly</h1>
+                <h1 className="text-center py-4 animate__animated animate__fadeInTopLeft">
+                    Best Food Waiting For Your Belly
+                </h1>
                 <InputGroup style={{width: '25%', margin: 'auto'}} className="mb-3">
                     <FormControl
                         placeholder="Your best recipe"

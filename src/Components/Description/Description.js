@@ -9,6 +9,7 @@ import icon_3 from '../../images/icon-3.png';
 import { Container, Row } from 'react-bootstrap';
 import CardGroup from 'react-bootstrap/CardGroup'
 import CardData from '../CardData/CardData';
+import 'animate.css';
 
 
 
