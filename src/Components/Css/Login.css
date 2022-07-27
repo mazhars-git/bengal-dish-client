@@ -6,3 +6,9 @@
     color: #fff;
 }
 
+.login-content{
+    margin-top: 50px;
+    background: rgba(248, 4, 4, 0.384);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
