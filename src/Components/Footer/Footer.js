@@ -1,13 +1,13 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import './Footer.css';
+import '../Css/Footer.css';
 import Logo from '../../images/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
-        <section className="footer-area">
+        <section className="footer-area" id="contact">
             <Container className="pt-5 pb-2">
             <Row>
                 <Col md={6} className="text-left">
