@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from '../../images/logo2.png';
 import '../Css/Login.css';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -32,6 +34,9 @@ const Login = () => {
                             <p className="text-center">Already have an account?</p>
                         </form>
                     </div>
+                    <Link to="/">
+                        <ArrowBackIcon />
+                    </Link>
                 </div>
                
             </div>
