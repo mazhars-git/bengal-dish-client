@@ -24,7 +24,7 @@ const Footer = () => {
                             </ul>
                         </Col>
                         <Col md={6}>
-                            <ul className="footer-list">
+                            <ul className="footer-list animate__animated animate__fadeInTopRight">
                                 <li><a href="#">Get helps</a></li>
                                 <li><a href="#">Read FAQs</a></li>
                                 <li><a href="#">View all cities</a></li>
