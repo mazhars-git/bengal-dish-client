@@ -7,9 +7,12 @@ import icon_1 from '../../images/icon.png';
 import icon_2 from '../../images/icon-2.png';
 import icon_3 from '../../images/icon-3.png';
 import { Container, Row } from 'react-bootstrap';
-import CardGroup from 'react-bootstrap/CardGroup'
 import CardData from '../CardData/CardData';
 import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 

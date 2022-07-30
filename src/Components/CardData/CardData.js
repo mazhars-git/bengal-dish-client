@@ -8,7 +8,12 @@ const CardData = (props) => {
     return (
         <div>
             <Col>
-            <Card border="light" className='animate__animated animate__backInDown'>
+            <Card 
+                border="light" 
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+            >
                 <Card.Img variant="top" src={image} />
                 <Card.Body className="py-3 px-1">
                     <Container>
