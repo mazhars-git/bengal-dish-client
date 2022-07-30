@@ -7,8 +7,8 @@ const AddItem = () => {
   
 
   return (
-    <section>
-      <div className="container my-5">
+    <section className="dashboard">
+      <div className="container py-5">
         <div className="row">
           <div className="col-md-4">
               <Sidebar />

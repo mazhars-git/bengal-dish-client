@@ -1,0 +1,6 @@
+.dashboard{
+    background-image: url(../../images/dashboard-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 40rem;
+}

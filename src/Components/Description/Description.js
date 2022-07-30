@@ -53,8 +53,8 @@ const Description = () => {
     return (
         <div className="description-area">
             <Container>
-                <h2 className="py-3 animate__animated animate__fadeInTopLeft">Why you choose us?</h2>
-                <p className="animate__animated animate__backInRight" style={{fontSize: '13px'}}>Barton waited twenty always repair in within we do. An delighted offending <br/> curiosity my is dashwoods at. Boy prosperous increasing surrounded. </p>
+                <h2 className="py-3" data-aos="fade-down">Why you choose us?</h2>
+                <p data-aos="fade-down-left" style={{fontSize: '13px'}}>Barton waited twenty always repair in within we do. An delighted offending <br/> curiosity my is dashwoods at. Boy prosperous increasing surrounded. </p>
 
                 <Row xs={1} md={3} className="g-4 py-3">
                     {
