@@ -25,35 +25,27 @@ const Sidebar = () => {
             <MenuList>
                 <MenuItem>
                     <Link to="/dashboard">
-                        <ListItemIcon>
-                            <DashboardIcon color="secondary" fontSize="medium" />
-                        </ListItemIcon>
+                        <DashboardIcon color="secondary" fontSize="medium" />
                         <Typography variant="inherit">Dashboard</Typography>
                     </Link>
                 </MenuItem>
                 <MenuItem>
                     <Link to="/addItem">
-                        <ListItemIcon>
-                            <AddIcon color="secondary" fontSize="medium" />
-                        </ListItemIcon>
+                        <AddIcon color="secondary" fontSize="medium" />
                         <Typography variant="inherit">Add Item</Typography>
                     </Link>
                 </MenuItem>
                 
                 <MenuItem>
                     <Link to="/managePd">
-                    <ListItemIcon>
                         <ListIcon color="secondary" fontSize="medium" />
-                    </ListItemIcon>
-                    <Typography variant="inherit">Manage Product</Typography>
+                        <Typography variant="inherit">Manage Product</Typography>
                     </Link>
                 </MenuItem>
 
                 <MenuItem>
                     <Link to="/">
-                        <ListItemIcon>
-                            <ExitToAppIcon color="secondary" fontSize="medium" />
-                        </ListItemIcon>
+                        <ExitToAppIcon color="secondary" fontSize="medium" />
                         <Typography variant="inherit">
                             Back
                         </Typography>

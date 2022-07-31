@@ -1,11 +1,12 @@
 
 
-
-
 a {
   color: #fcab42 !important;
+  align-items: center;
+  
 }
 
 a:hover{
   color: #00bbf9 !important;
+  text-decoration: none !important;
 }
