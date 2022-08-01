@@ -37,7 +37,7 @@ const Sidebar = () => {
                     </Link>
                 </MenuItem>
                 
-                <MenuItem>
+                <MenuItem className="mb-lg-5">
                     <Link to="/managePd">
                         <ListIcon color="secondary" fontSize="medium" />
                         <Typography variant="inherit">Manage Product</Typography>

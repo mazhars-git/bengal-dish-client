@@ -10,11 +10,11 @@ const AddItem = () => {
     <section className="dashboard">
       <div className="container py-5">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-3">
               <Sidebar />
           </div>
           
-          <div className="col-md-8">
+          <div className="col-md-9 addForm">
               <form class="row g-3">
                   <div class="col-md-6">
                     <label for="name" class="form-label">Item Name</label>

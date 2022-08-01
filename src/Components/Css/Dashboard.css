@@ -4,3 +4,10 @@
     background-position: center;
     min-height: 40rem;
 }
+
+.addForm{
+    background-color: rgba(6, 43, 253, 0.288);
+    color: #fff;
+    font-weight: bold;
+    padding: 25px;
+}
