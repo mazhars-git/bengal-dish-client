@@ -37,17 +37,17 @@ const Sidebar = () => {
                     </Link>
                 </MenuItem>
                 
-                <MenuItem className="mb-lg-5">
+                <MenuItem className="mb-5">
                     <Link to="/managePd">
                         <ListIcon color="secondary" fontSize="medium" />
                         <Typography variant="inherit">Manage Product</Typography>
                     </Link>
                 </MenuItem>
-
+                
                 <MenuItem>
                     <Link to="/">
                         <ExitToAppIcon color="secondary" fontSize="medium" />
-                        <Typography paddingLeft="10px" variant="inherit">
+                        <Typography variant="inherit">
                             Back
                         </Typography>
                     </Link>
