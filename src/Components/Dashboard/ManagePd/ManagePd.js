@@ -10,7 +10,7 @@ const ManagePd = () => {
                         <Sidebar />
                     </div>
                     <div className="col-md-9">
-                        <h3>Admin Area</h3>
+                        <h2 style={{color: '#fff', fontWeight: 'bold'}}>Admin Area</h2>
                     </div>
                 </div>
             </div>

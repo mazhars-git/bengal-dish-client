@@ -11,7 +11,7 @@ const Dashboard = () => {
                         <Sidebar />
                     </div>
                     <div className="col-md-9">
-                        <h3>Dashboard Area</h3>
+                        <h2 style={{color: '#fff', fontWeight: 'bold'}}>Dashboard Area</h2>
                     </div>
                 </div>
             </div>
