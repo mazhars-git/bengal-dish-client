@@ -11,7 +11,7 @@ const CheckOut = () => {
                         <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown</p>
                     </div>
                     <div className="col-md-6">
-                        <img width='150px' src="../../images/des-3.png"></img>
+                        <img width='400' height= '200' src="../../images/dish-1.jpg"></img>
                     </div>
                 </div>
             </div>

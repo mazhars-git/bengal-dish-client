@@ -3,6 +3,7 @@ import { Image, Nav } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../../images/logo2.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Badge } from '@mui/material';
 
 const MainMenu = () => {
     return (
@@ -16,8 +17,11 @@ const MainMenu = () => {
                         style={{ maxHeight: '100px'}}
                         navbarScroll
                     >
+                        
                         <Nav.Link href="#">
-                            <ShoppingCartOutlinedIcon />
+                            <Badge badgeContent={4} color="primary">
+                                <ShoppingCartOutlinedIcon color="action" />
+                            </Badge>
                         </Nav.Link>
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
