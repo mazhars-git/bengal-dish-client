@@ -13,7 +13,11 @@ const CheckOut = () => {
                     <div className="col-md-6">
                         <img width='400' height= '200' src="../../images/dish-1.jpg"></img>
                     </div>
+                    <button>
+                        Order Now
+                    </button>
                 </div>
+
             </div>
         </section>
 
