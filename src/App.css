@@ -10,3 +10,10 @@ a:hover{
   color: #00bbf9 !important;
   text-decoration: none !important;
 }
+
+.btn-brand{
+  background-color: #ef233c !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  padding: 5px 20px !important;
+}

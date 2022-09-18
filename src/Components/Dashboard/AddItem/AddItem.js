@@ -48,8 +48,8 @@ const AddItem = () => {
                     <input type="file" id="formFile" />
                   </div>
 
-                  <div className="col-12">
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                  <div className="col-12 d-flex justify-content-end">
+                    <button type="submit" className="btn btn-brand">Add</button>
                   </div>
               </form>
           </div>
