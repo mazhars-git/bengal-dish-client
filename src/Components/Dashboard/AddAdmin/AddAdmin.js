@@ -20,24 +20,24 @@ const AddItem = () => {
 
           <div className="col-md-9 addForm">
               <form className="row g-3">
-                <div className="col-md-4">
-                    <label for="name" className="form-label">Item Name</label>
+                <div className="col-md-6">
+                    <label for="name" className="form-label">Admin Name</label>
                     <input type="text" className="form-control" id="name" />
                   </div>
-                  <div className="col-md-4">
-                    <label for="price" className="form-label">Item Price</label>
-                    <input type="number" className="form-control" id="price" />
+                  <div className="col-md-6">
+                    <label for="email" className="form-label">Email Address</label>
+                    <input type="email" className="form-control" id="email" />
                   </div>
-                  <div className="col-md-4">
-                    <label for="category" className="form-label">Category</label>
+                  <div className="col-md-6">
+                    <label for="category" className="form-label mt-3">Category</label>
                       <select className="form-control" id="category">
                           <option selected="true" disabled="disabled">Select Category</option>
-                          <option>Breakfast</option>
-                          <option>Lunch</option>
-                          <option>Dinner</option>
+                          <option>Admin</option>
+                          <option>Moderator</option>
+                          <option>Editor</option>
                       </select>
                   </div>
-                  
+
                   <div className="col-12 d-flex justify-content-end">
                     <button type="submit" className="btn btn-brand">Add</button>
                   </div>
