@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import AddIcon from '@material-ui/icons/Add';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import '../../Css/Sidebar.css';
+import { PersonAdd } from '@material-ui/icons';
+import { PersonAddAlt1 } from '@mui/icons-material';
 
 const useStyles = makeStyles({
     root: {
@@ -34,6 +36,13 @@ const Sidebar = () => {
                     <Link to="/addItem">
                         <AddIcon color="secondary" fontSize="medium" />
                         <Typography variant="inherit">Add Item</Typography>
+                    </Link>
+                </MenuItem>
+
+                <MenuItem>
+                    <Link to="/addAdmin">
+                        <PersonAddAlt1 color="secondary" fontSize="medium" />
+                        <Typography variant="inherit">Add Admin</Typography>
                     </Link>
                 </MenuItem>
                 
