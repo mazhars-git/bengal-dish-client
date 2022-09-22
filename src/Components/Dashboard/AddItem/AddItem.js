@@ -4,6 +4,11 @@ import Sidebar from '../Sidebar/Sidebar';
 import "../../Css/HookForm.css";
 
 const AddItem = () => {
+
+  const handleSubmit= (e) =>{
+    e.preventDefault();
+    console.log('submit clicked')
+  }
   
 
   return (
@@ -19,7 +24,7 @@ const AddItem = () => {
     {/* ----------------------add item form ---------------------------- */}
 
           <div className="col-md-9 addForm">
-              <form className="row g-3">
+              <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col-md-4">
                     <label for="name" className="form-label">Item Name</label>
                     <input type="text" className="form-control" id="name" />
