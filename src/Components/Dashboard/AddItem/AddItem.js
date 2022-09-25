@@ -18,8 +18,9 @@ const AddItem = () => {
     console.log(mealItem)
 
     //send data to server
-    
-    fetch('', {
+
+    fetch('http://localhost:5022/item', {
+      
       method: 'POST',
       headers: {
         'content-type' : 'application/json'
@@ -30,8 +31,8 @@ const AddItem = () => {
     .then(data => {
       console.log('success', data)
       alert('item added successfully!!')
-      e.target.removeEventListener();
     })
+    e.target.reset();
   }
   
 
@@ -50,7 +51,7 @@ const AddItem = () => {
           <div className="col-md-9 addForm">
               <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col-md-4">
-                    <label for="itemName" className="form-label">Item Name</label>
+                    <label htmlFor="itemName" className="form-label">Item Name</label>
                     <input type="text" className="form-control" id="itemName" name="item" required />
                   </div>
                   <div className="col-md-4">
