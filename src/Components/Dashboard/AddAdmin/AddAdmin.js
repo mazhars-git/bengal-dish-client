@@ -6,7 +6,13 @@ import "../../Css/HookForm.css";
 const AddItem = () => {
 
   const handleAddAdmin = (e) =>{
-    console.log('Clicked Add Admin');
+    const adminName = e.target.name.value;
+    const adminEmail = e.target.email.value;
+    const adminCategory = e.target.category.value;
+
+    const newAdminInfo = {adminName, adminEmail, adminCategory}
+    console.log(newAdminInfo);
+    e.preventDefault();
   }
   
 
