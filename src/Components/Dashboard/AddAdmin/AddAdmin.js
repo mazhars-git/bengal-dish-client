@@ -4,6 +4,10 @@ import Sidebar from '../Sidebar/Sidebar';
 import "../../Css/HookForm.css";
 
 const AddItem = () => {
+
+  const handleAddAdmin = (e) =>{
+    console.log('Clicked Add Admin');
+  }
   
 
   return (
@@ -19,18 +23,18 @@ const AddItem = () => {
     {/* ----------------------add item form ---------------------------- */}
 
           <div className="col-md-9 addForm">
-              <form className="row g-3">
+              <form className="row g-3" onSubmit={handleAddAdmin}>
                 <div className="col-md-6">
                     <label for="name" className="form-label">Admin Name</label>
-                    <input type="text" className="form-control" id="name" />
+                    <input type="text" className="form-control" id="name" name="name" />
                   </div>
                   <div className="col-md-6">
                     <label for="email" className="form-label">Email Address</label>
-                    <input type="email" className="form-control" id="email" />
+                    <input type="email" className="form-control" id="email" name="email" />
                   </div>
                   <div className="col-md-6">
                     <label for="category" className="form-label mt-3">Category</label>
-                      <select className="form-control" id="category">
+                      <select className="form-control" id="category" name="category">
                           <option selected="true" disabled="disabled">Select Category</option>
                           <option>Admin</option>
                           <option>Moderator</option>
