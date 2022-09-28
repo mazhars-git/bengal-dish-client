@@ -32,11 +32,11 @@ const AddItem = () => {
               <form className="row g-3" onSubmit={handleAddAdmin}>
                 <div className="col-md-6">
                     <label for="name" className="form-label">Admin Name</label>
-                    <input type="text" className="form-control" id="name" name="name" />
+                    <input type="text" className="form-control" id="name" name="name" required />
                   </div>
                   <div className="col-md-6">
                     <label for="email" className="form-label">Email Address</label>
-                    <input type="email" className="form-control" id="email" name="email" />
+                    <input type="email" className="form-control" id="email" name="email" required />
                   </div>
                   <div className="col-md-6">
                     <label for="category" className="form-label mt-3">Category</label>
@@ -49,7 +49,7 @@ const AddItem = () => {
                   </div>
 
                   <div className="col-12 d-flex justify-content-end">
-                    <button type="submit" className="btn btn-brand">Add</button>
+                    <button type="submit" className="btn btn-brand">Add New Admin</button>
                   </div>
               </form>
           </div>
