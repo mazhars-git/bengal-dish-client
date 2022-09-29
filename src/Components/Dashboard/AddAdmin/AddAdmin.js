@@ -29,18 +29,15 @@ const AddItem = () => {
     {/* ----------------------add item form ---------------------------- */}
 
           <div className="col-md-9 addForm">
-              <form className="row g-3" onSubmit={handleAddAdmin}>
+              <form className="row g-3 pt-3" onSubmit={handleAddAdmin}>
                 <div className="col-md-6">
-                    <label for="name" className="form-label">Admin Name</label>
-                    <input type="text" className="form-control" id="name" name="name" required />
+                    <input type="text" className="form-control" id="name" name="name" placeholder='Admin Name' required />
                   </div>
                   <div className="col-md-6">
-                    <label for="email" className="form-label">Email Address</label>
-                    <input type="email" className="form-control" id="email" name="email" required />
+                    <input type="email" className="form-control" id="email" name="email" placeholder='Email' required />
                   </div>
                   <div className="col-md-6">
-                    <label for="category" className="form-label mt-3">Category</label>
-                      <select className="form-control" id="category" name="category">
+                      <select className="form-control mt-4" id="category" name="category">
                           <option selected="true" disabled="disabled">Select Category</option>
                           <option>Admin</option>
                           <option>Moderator</option>
