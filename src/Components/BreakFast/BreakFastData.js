@@ -10,6 +10,7 @@ const BreakFastData = (props) => {
             <div className="content-box">
                 <Image src={image} alt="breakfast" fluid />
                 <h6>{item}</h6>
+                <button className="btn-brand">Order Now</button>
             </div>
         </div>
     );
