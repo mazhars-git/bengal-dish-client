@@ -18,8 +18,9 @@ const AddItem = () => {
     console.log(mealItem)
 
     //send data to server
+    
 
-    fetch('http://localhost:5022/item', {
+    fetch('http://localhost:5000/item', {
       
       method: 'POST',
       headers: {
