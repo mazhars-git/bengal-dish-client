@@ -17,7 +17,6 @@ const ItemDetails = (props) => {
 
     console.log(booking);
 
-
     return (
         <section>
             <div className="container py-5">
