@@ -15,8 +15,8 @@ import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import AddItem from './Components/Dashboard/AddItem/AddItem';
 import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
 import Login from './Components/Login/Login';
-import CheckOut from './Components/CheckOut/CheckOut';
 import ManagePd from './Components/Dashboard/ManagePd/ManagePd';
+import ItemDetails from './Components/ItemDetails/ItemDetails';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       <Route path="/breakfast" element={<BreakFast />} />
       <Route path="/lunch" element={<Lunch />} />
       <Route path="/dinner" element={<Dinner />} />
-      <Route path="/item/:itemId" element={<CheckOut />} />
+      <Route path="/item/:itemId" element={<ItemDetails />} />
     </Routes>
   );
 }

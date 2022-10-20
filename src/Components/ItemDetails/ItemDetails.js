@@ -1,9 +1,11 @@
 import React from 'react';
-import '../Css/CheckOut.css';
+import '../Css/ItemDetails.css';
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const CheckOut = (props) => {
+const ItemDetails = (props) => {
     const {itemId} = useParams();
     const [booking, setBooking] = useState({});
 
@@ -23,13 +25,18 @@ const CheckOut = (props) => {
                     <div className="col-md-6">
                         <h1>{booking.item} </h1>
                         <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown</p>
+                        
+                        
+                        <button className="btn-brand">
+                            <FontAwesomeIcon icon={faShoppingCart} />
+                            <span> </span> Add
+                        </button>
                     </div>
+                    
                     <div className="col-md-6">
-                        <img width='400' alt='Item_Image' src={booking.image}></img>
+                        <img className="img-fluid align-self-center p-3" alt='Item_Image' src={booking.image}></img>
                     </div>
-                    <button className="btn-brand">
-                        Order Now
-                    </button>
+                    
                 </div>
 
             </div>
@@ -38,4 +45,4 @@ const CheckOut = (props) => {
     );
 };
 
-export default CheckOut;
+export default ItemDetails;
