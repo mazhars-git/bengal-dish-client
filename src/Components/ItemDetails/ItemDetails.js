@@ -27,14 +27,14 @@ const ItemDetails = (props) => {
                         <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown</p>
                         
                         <div className="d-flex py-3">
-                            <div>
+                            <div className="item-price">
                                 <h2>$55</h2>
                             </div>                            
     
                             <div className="d-flex quantity-box">
-                                <span className="plus"> + </span>
-                                    <p className="quantity">1</p>
                                 <span className="minus"> - </span>
+                                    <p className="quantity">1</p>
+                                <span className="plus"> + </span>
                             </div>
                             
                         </div>
