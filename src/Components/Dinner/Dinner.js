@@ -1,20 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import DinnerInfo from '../../FakeData/dinner.json';
 import DinnerData from './DinnerData';
 
 const Dinner = () => {
-    const [dinner, setDinner] = useState([]);
-    
+    const [itemsData, setItemsData] = useState([]);
+
     useEffect(() => {
-        setDinner(DinnerInfo)
-    },[])
+        fetch('http://localhost:5000/items')
+        .then(res => res.json())
+        .then(data => setItemsData(data))
+    }, []);
+    console.log(itemsData);
+
+    const dinnerData = itemsData.filter(function (el)
+    {
+    return el.category == "dinner";
+    }
+    );
+    console.log(dinnerData);
 
     return (
         <Container>
             <Row>
                 {
-                    dinner.map(dishInfo => <DinnerData key={dishInfo.id} data={dishInfo}></DinnerData>)
+                    dinnerData.map(dishInfo => <DinnerData key={dishInfo._id} data={dishInfo}></DinnerData>)
                 }
             </Row>
         </Container>

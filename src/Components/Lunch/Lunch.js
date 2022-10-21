@@ -4,17 +4,27 @@ import LunchInfo from '../../FakeData/lunch.json';
 import LunchData from './LunchData';
 
 const Lunch = () => {
-    const [lunch, setLunch] = useState([]);
+    const [itemsData, setItemsData] = useState([]);
 
     useEffect(() => {
-        setLunch(LunchInfo);
-    }, [])
+        fetch('http://localhost:5000/items')
+        .then(res => res.json())
+        .then(data => setItemsData(data))
+    }, []);
+    console.log(itemsData);
+
+    const lunchData = itemsData.filter(function (el)
+    {
+    return el.category == "lunch";
+    }
+    );
+    console.log(lunchData);
 
     return (
         <Container> 
             <Row>
                 {
-                    lunch.map(info => <LunchData data={info}></LunchData>)
+                    lunchData.map(info => <LunchData key={info._id} data={info}></LunchData>)
                 }
             </Row>
         </Container>
