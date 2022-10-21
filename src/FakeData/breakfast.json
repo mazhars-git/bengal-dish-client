@@ -1,35 +1,41 @@
 [{
     "id": 1,
+    "price": 35,
     "category": "breakfast",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "item": "Pinedrops",
     "image": "https://i.ibb.co/SKJSRRx/breakfast4.png"
   }, {
     "id": 2,
+    "price": 40,
     "category": "breakfast",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "item": "Island Sand Verbena",
     "image": "https://i.ibb.co/Sf6Wqxq/breakfast3.png"
   }, {
     "id": 3,
+    "price": 50,
     "category": "breakfast",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "item": "Reverchon's Spikerush",
     "image": "https://i.ibb.co/Y2fjCXS/breakfast2.png"
   }, {
     "id": 4,
+    "price": 55,
     "category": "breakfast",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "item": "Bolander's Yampah",
     "image": "https://i.ibb.co/XxsXSNm/breakfast6.png"
   }, {
     "id": 5,
+    "price": 45,
     "category": "breakfast",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "item": "Fox Sedge",
     "image": "https://i.ibb.co/j4Qkvzr/breakfast1.png"
   }, {
     "id": 6,
+    "price": 85,
     "category": "breakfast",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     "item": "Orange Lichen",

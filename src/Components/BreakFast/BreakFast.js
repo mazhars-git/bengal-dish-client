@@ -4,23 +4,29 @@ import { Container, Row } from 'react-bootstrap';
 import BreakFastData from '../BreakFast/BreakFastData';
 
 const BreakFast = () => {
-    const [breakFast, setBreakFast] = useState([]);
+    const [itemsData, setItemsData] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/items')
         .then(res => res.json())
-        .then(data => setBreakFast(data))
+        .then(data => setItemsData(data))
     }, []);
+    console.log(itemsData);
 
-    console.log(breakFast);
+    const breakfastData = itemsData.filter(function (el)
+    {
+    return el.category == "breakfast";
+    }
+    );
+    console.log(breakfastData);
 
-
+   
     return (
         <section>
             <Container>
                 <Row>
                     {
-                        breakFast.map(data => <BreakFastData key={data._id} data={data}></BreakFastData>)
+                        breakfastData.map(data => <BreakFastData key={data._id} data={data}></BreakFastData>)
                     }
                 </Row>
             </Container>
