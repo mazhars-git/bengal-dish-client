@@ -8,7 +8,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 const ItemDetails = (props) => {
     const {itemId} = useParams();
     const [booking, setBooking] = useState({});
-    const [itemNum, setItemNum] = useState(0);
+    const [itemNum, setItemNum] = useState(1);
 
     useEffect(() =>{
         fetch(`http://localhost:5000/item/${itemId}`)
@@ -22,7 +22,12 @@ const ItemDetails = (props) => {
         setItemNum (itemNum+1);   
      }
      const handleDecrease = () => {
-        setItemNum (itemNum-1);
+        if(itemNum > 1){
+            setItemNum (itemNum-1);
+        }else{
+            return false;
+        }
+        
      }
 
     return (
