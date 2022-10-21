@@ -8,7 +8,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 const ItemDetails = (props) => {
     const {itemId} = useParams();
     const [booking, setBooking] = useState({});
-    const [itemNum, setItemNum] = useState(1);
+    const [num, setNum] = useState(1);
 
     useEffect(() =>{
         fetch(`http://localhost:5000/item/${itemId}`)
@@ -19,11 +19,11 @@ const ItemDetails = (props) => {
     console.log(booking);
 
     const handleIncrease = () => {
-        setItemNum (itemNum+1);   
+        setNum (num+1);   
      }
      const handleDecrease = () => {
-        if(itemNum > 1){
-            setItemNum (itemNum-1);
+        if(num > 1){
+            setNum (num-1);
         }else{
             return false;
         }
@@ -40,12 +40,12 @@ const ItemDetails = (props) => {
                         
                         <div className="d-flex py-3">
                             <div className="item-price">
-                                <h2>${booking.price}</h2>
+                                <h2>${booking.price*num}</h2>
                             </div>                            
     
                             <div className="d-flex quantity-box">
                                 <span onClick={handleDecrease} className="minus"> - </span>
-                                    <p className="quantity">{itemNum}</p>
+                                    <p className="quantity">{num}</p>
                                 <span onClick={handleIncrease} id="plusBtn" className="plus"> + </span>
                             </div>
                             
