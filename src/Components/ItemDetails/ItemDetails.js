@@ -25,7 +25,7 @@ const ItemDetails = (props) => {
         if(num > 1){
             setNum (num-1);
         }else{
-            return false;
+            alert('Please input valid number');
         }
         
      }
@@ -40,7 +40,7 @@ const ItemDetails = (props) => {
                         
                         <div className="d-flex py-3">
                             <div className="item-price">
-                                <h2>${booking.price*num}</h2>
+                                <h2>${booking.price}</h2>
                             </div>                            
     
                             <div className="d-flex quantity-box">
