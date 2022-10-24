@@ -3,7 +3,7 @@ import { Image } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const LunchData = (props) => {
-    const {_id, image, item} = props.data;
+    const {_id, image, item, price} = props.data;
 
     const navigate = useNavigate();
 
@@ -12,10 +12,10 @@ const LunchData = (props) => {
     }
     return (
         <div className="col-md-4">
-            <div className="content-box">
-                <Image src={image} fluid/>
+            <div onClick={() => navigateToItemDetail(_id)} className="content-box">
+                <Image src={image} alt="lunch" fluid />
                 <h6>{item}</h6>
-                <button onClick={() => navigateToItemDetail(_id)} className="btn-brand">Order Now</button>
+                <h4>${price}</h4>
             </div>
         </div>
     );

@@ -9,7 +9,7 @@ const MainMenu = () => {
     return (
         <div>
             <Navbar fixed="top" bg="light" expand="lg">
-            <Navbar.Brand href="#"><Image src={Logo} style={{ width: '10rem' }}/></Navbar.Brand>
+            <Navbar.Brand href="/"><Image src={Logo} style={{ width: '10rem' }}/></Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -18,7 +18,7 @@ const MainMenu = () => {
                         navbarScroll
                     >
                         
-                        <Nav.Link href="#">
+                        <Nav.Link href="/checkout">
                             <Badge badgeContent={4} color="primary">
                                 <ShoppingCartOutlinedIcon color="action" />
                             </Badge>

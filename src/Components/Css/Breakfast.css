@@ -4,6 +4,7 @@
     margin-bottom: 15px;
     border-radius: 5px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .content-box h6{
@@ -11,5 +12,5 @@
 }
 
 .content-box:hover{
-    box-shadow: 5px 5px 20px #c5c4c4;
+    box-shadow: 5px 5px 20px #7e7e7e;
 }
