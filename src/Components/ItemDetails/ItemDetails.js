@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import swal from 'sweetalert';
 
 const ItemDetails = (props) => {
     const {itemId} = useParams();
@@ -25,7 +26,12 @@ const ItemDetails = (props) => {
         if(num > 1){
             setNum (num-1);
         }else{
-            alert('Please input valid number');
+            swal({
+                title: "Something Wrong!!!",
+                icon: "warning",
+                button: true,
+                dangerMode: true,
+              })
         }
         
      }
