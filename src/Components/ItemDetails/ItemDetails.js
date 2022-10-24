@@ -27,13 +27,12 @@ const ItemDetails = (props) => {
             setNum (num-1);
         }else{
             swal({
-                title: "Something Wrong!!!",
+                title: "Something Went Wrong!!!",
                 icon: "warning",
                 button: true,
                 dangerMode: true,
-              })
+            })
         }
-        
      }
 
     return (

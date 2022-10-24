@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 
 import "../../Css/HookForm.css";
+import { swal } from 'sweetalert';
 
 const AddItem = () => {
 
@@ -31,7 +32,7 @@ const AddItem = () => {
     .then(res => res.json())
     .then(data => {
       console.log('success', data)
-      alert('item added successfully!!')
+      swal("Good job!", "Successfully Added", "success");
     })
     e.target.reset();
   }

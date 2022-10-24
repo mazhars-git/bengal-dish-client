@@ -1,9 +1,8 @@
 import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
-
 import "../../Css/HookForm.css";
 
-const AddItem = () => {
+const AddAdmin = () => {
 
   const handleAddAdmin = (e) =>{
     const adminName = e.target.name.value;
@@ -12,6 +11,7 @@ const AddItem = () => {
 
     const newAdminInfo = {adminName, adminEmail, adminCategory}
     console.log(newAdminInfo);
+  
     e.preventDefault();
   }
   
@@ -56,4 +56,4 @@ const AddItem = () => {
   );
 };
 
-export default AddItem;
+export default AddAdmin;
