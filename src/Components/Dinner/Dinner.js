@@ -1,29 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import DinnerData from './DinnerData';
+import UseItems from './../UseItems/UseItems';
 
 const Dinner = () => {
-    const [itemsData, setItemsData] = useState([]);
+    const [itemsData] = UseItems();
 
-    useEffect(() => {
-        fetch('http://localhost:5000/items')
-        .then(res => res.json())
-        .then(data => setItemsData(data))
-    }, []);
-    console.log(itemsData);
-
-    const dinnerData = itemsData.filter(function (el)
-    {
-    return el.category == "dinner";
-    }
+    const dinner = itemsData.filter(function (el)
+        {
+            return el.category === "dinner";
+        }
     );
-    console.log(dinnerData);
+    console.log(dinner);
 
     return (
         <Container>
             <Row>
                 {
-                    dinnerData.map(dishInfo => <DinnerData key={dishInfo._id} data={dishInfo}></DinnerData>)
+                    dinner.map(dishInfo => <DinnerData key={dishInfo._id} data={dishInfo}></DinnerData>)
                 }
             </Row>
         </Container>
