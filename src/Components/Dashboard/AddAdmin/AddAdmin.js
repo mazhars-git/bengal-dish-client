@@ -12,7 +12,7 @@ const AddAdmin = () => {
     const newAdminInfo = {adminName, adminEmail, adminCategory}
     console.log(newAdminInfo);
   
-    e.preventDefault();
+    // e.preventDefault();
   }
   
 

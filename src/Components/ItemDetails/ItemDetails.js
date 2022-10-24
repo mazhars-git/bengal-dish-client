@@ -5,6 +5,7 @@ import {useParams} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import swal from 'sweetalert';
+import MainMenu from './../MainMenu/MainMenu';
 
 const ItemDetails = (props) => {
     const {itemId} = useParams();
@@ -38,8 +39,9 @@ const ItemDetails = (props) => {
     return (
         <section>
             <div className="container py-5">
-                <div className="row">
-                    <div className="col-md-6">
+                <MainMenu />
+                <div className="row pt-2">
+                    <div className="col-md-6 align-self-center">
                         <h1>{booking.item} </h1>
                         <p>{booking.description}</p>
                         
@@ -62,7 +64,7 @@ const ItemDetails = (props) => {
                         </button>
                     </div>
                     
-                    <div className="col-md-6">
+                    <div className="col-md-6 align-self-center">
                         <img className="img-fluid align-self-center p-3" alt='Item_Image' src={booking.image}></img>
                     </div>
                     
