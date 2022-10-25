@@ -10,7 +10,7 @@ const [itemsData, setItemsData] = useState([]);
         .then(data => setItemsData(data))
     }, []);
 
-    return [itemsData]
+    return [itemsData, setItemsData]
 }
 
 export default UseItems;

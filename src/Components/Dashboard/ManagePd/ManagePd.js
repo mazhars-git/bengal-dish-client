@@ -1,11 +1,29 @@
 import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import UseItems from './../../UseItems/UseItems';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+import { swal } from 'sweetalert';
 
 const ManagePd = () => {
-    const [itemsData] = UseItems();
+    const [itemsData, setItemsData] = UseItems();
+
+    const handleDelete= id => {
+        const proceed = window.confirm("Are you sure? You want to delete this??")       
+
+        if(proceed){
+            const url = `http://localhost:5000/item/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data)
+                const remaining = itemsData.filter(item => item._id !== id);
+                setItemsData(remaining);
+            })
+        }
+    }
+
     return (
         <section className="dashboard">
             <div className="container">
@@ -29,12 +47,14 @@ const ManagePd = () => {
                                 <tbody>
                                     
                                     {
-                                        itemsData.map((items, index) => 
-                                        <tr key={items._id}>
+                                        itemsData.map((item, index) => 
+                                        <tr key={item._id}>
                                             <th scope="row">{index + 1}</th>
-                                            <td>{items.item}</td>
-                                            <td>{items.price}</td>
-                                            <td><FontAwesomeIcon icon={faFacebook}/></td>
+                                            <td>{item.item}</td>
+                                            <td>{item.price}</td>
+                                            <td onClick={() => handleDelete(item._id)}>
+                                                <DeleteRoundedIcon />
+                                            </td>
                                         </tr>
                                         )
                                     }

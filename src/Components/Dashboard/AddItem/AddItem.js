@@ -8,13 +8,13 @@ const AddItem = () => {
 
   const handleSubmit= (e) =>{
     e.preventDefault();
-    const item = e.target.item.value;
-    const price = e.target.price.value;
     const category = e.target.category.value;
     const description = e.target.description.value;
     const image = e.target.image.value;
+    const item = e.target.item.value;
+    const price = e.target.price.value; 
 
-    const mealItem = {item, price, category, description, image};
+    const mealItem = {category, description, image, item, price };
 
     console.log(mealItem)
 
@@ -31,8 +31,8 @@ const AddItem = () => {
     })
     .then(res => res.json())
     .then(data => {
+      alert("Added Successfully");
       console.log('success', data)
-      swal("Good job!", "Successfully Added", "success");
     })
     e.target.reset();
   }
@@ -64,9 +64,9 @@ const AddItem = () => {
                     <label for="category" className="form-label">Category</label>
                       <select className="form-control" id="category" name="category" required>
                           <option selected="true" disabled="disabled">Select Category</option>
-                          <option>Breakfast</option>
-                          <option>Lunch</option>
-                          <option>Dinner</option>
+                          <option>breakfast</option>
+                          <option>lunch</option>
+                          <option>dinner</option>
                       </select>
                   </div>
                   
