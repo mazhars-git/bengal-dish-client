@@ -22,7 +22,8 @@ const ItemDetails = (props) => {
 
     const handleIncrease = () => {
         setNum (num+1);   
-     }
+     };
+     
      const handleDecrease = () => {
         if(num > 1){
             setNum (num-1);
@@ -32,9 +33,9 @@ const ItemDetails = (props) => {
                 icon: "warning",
                 button: true,
                 dangerMode: true,
-            })
+            });
         }
-     }
+     };
 
     return (
         <section>

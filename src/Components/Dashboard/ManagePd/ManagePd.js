@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import UseItems from './../../UseItems/UseItems';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import { swal } from 'sweetalert';
+import { Pagination } from '@mui/material';
 
 const ManagePd = () => {
     const [itemsData, setItemsData] = UseItems();
+    const [pageCount, setPageCount] = useState(0);
+
+    useEffect(() =>{
+        fetch('http://localhost:5000/itemCount')
+        .then(res => res.json())
+        .then(data => {
+            const count = data.countItem;
+            const pages = Math.ceil(count/6);
+            setPageCount(pages);
+        })
+    }, [])
 
     const handleDelete= id => {
         const proceed = window.confirm("Are you sure? You want to delete this??")       
-
         if(proceed){
             const url = `http://localhost:5000/item/${id}`;
             fetch(url, {
@@ -22,7 +33,7 @@ const ManagePd = () => {
                 setItemsData(remaining);
             })
         }
-    }
+    };
 
     return (
         <section className="dashboard">
@@ -62,7 +73,13 @@ const ManagePd = () => {
                                 </tbody>
                             </table>
                        </div>
+                    
+            {/* -------------- -------Pagination Added----------------*/}
 
+                        {
+                            <Pagination count={3} color="primary" />
+                        }
+                       
                     </div>
                 </div>
             </div>
