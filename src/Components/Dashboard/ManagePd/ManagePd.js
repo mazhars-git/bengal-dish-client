@@ -9,6 +9,7 @@ const ManagePd = () => {
     const [itemsData, setItemsData] = UseItems();
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
+    const [pageSize, setPageSize] = useState(10);
 
 
     useEffect(() =>{
@@ -89,6 +90,12 @@ const ManagePd = () => {
                                     {number + 1}
                                 </button>)                            
                             }
+
+                            <select onChange={e => setPageSize(e.target.value)}>
+                                <option value="5">5</option>
+                                <option value="5" selected>15</option>
+                                <option value="5">20</option>
+                            </select>
                         </div>
                     </div>
                 </div>
