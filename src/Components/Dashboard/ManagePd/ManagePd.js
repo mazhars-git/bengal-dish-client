@@ -3,12 +3,13 @@ import Sidebar from '../Sidebar/Sidebar';
 import UseItems from './../../UseItems/UseItems';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import { swal } from 'sweetalert';
-import { Pagination } from '@mui/material';
 import '../../Css/Pagination.css';
 
 const ManagePd = () => {
     const [itemsData, setItemsData] = UseItems();
     const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+
 
     useEffect(() =>{
         fetch('http://localhost:5000/itemCount')
@@ -77,22 +78,18 @@ const ManagePd = () => {
                     
             {/* -------------- -------Pagination Added----------------*/}
 
-                    <div className="pagination">
-                        {
-                            [...Array(pageCount).keys()]
-                            .map(number => 
-                            <button>
-                                {number + 1}
-                            </button>)                            
-                        }
-                    </div>
-                        
-
-                        <Pagination count={10} color="primary" 
-
-                            
-                        />
-                       
+                        <div className="pagination">
+                            {
+                                [...Array(pageCount).keys()]
+                                .map(number => 
+                                <button
+                                    className={page === number ? 'selected' : ''}
+                                    onClick={() => setPage(number)}
+                                >
+                                    {number + 1}
+                                </button>)                            
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
