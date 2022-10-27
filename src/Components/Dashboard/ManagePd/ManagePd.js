@@ -4,6 +4,7 @@ import UseItems from './../../UseItems/UseItems';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import { swal } from 'sweetalert';
 import { Pagination } from '@mui/material';
+import '../../Css/Pagination.css';
 
 const ManagePd = () => {
     const [itemsData, setItemsData] = UseItems();
@@ -76,9 +77,21 @@ const ManagePd = () => {
                     
             {/* -------------- -------Pagination Added----------------*/}
 
+                    <div className="pagination">
                         {
-                            <Pagination count={3} color="primary" />
+                            [...Array(pageCount).keys()]
+                            .map(number => 
+                            <button>
+                                {number + 1}
+                            </button>)                            
                         }
+                    </div>
+                        
+
+                        <Pagination count={10} color="primary" 
+
+                            
+                        />
                        
                     </div>
                 </div>
