@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
-import UseItems from './../../UseItems/UseItems';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import { swal } from 'sweetalert';
 import '../../Css/Pagination.css';
 
 const ManagePd = () => {
-    const [itemsData, setItemsData] = UseItems();
+    const [itemsData, setItemsData] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
     const [pageSize, setPageSize] = useState(10);
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/items')
+        .then(res => res.json())
+        .then(data => setItemsData(data))
+    }, []);
 
 
     useEffect(() =>{
