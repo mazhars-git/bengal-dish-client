@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
-import { swal } from 'sweetalert';
 import '../../Css/Pagination.css';
 
 const ManagePd = () => {
     const [itemsData, setItemsData] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
-    const [pageSize, setPageSize] = useState(10);
+    const [size, setSize] = useState(10);
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/items?page=${page}&size=${pageSize}`)
+        fetch(`http://localhost:5000/product?page=${page}&size=${size}`)
         .then(res => res.json())
         .then(data => setItemsData(data))
-    }, [page, pageSize]);
+    }, [page, size]);
 
+    console.log(itemsData);
 
     useEffect(() =>{
         fetch('http://localhost:5000/itemCount')
@@ -26,7 +26,7 @@ const ManagePd = () => {
             const pages = Math.ceil(count/6);
             setPageCount(pages);
         })
-    }, [])
+    }, []);
 
     const handleDelete= id => {
         const proceed = window.confirm("Are you sure? You want to delete this??")       
@@ -97,10 +97,10 @@ const ManagePd = () => {
                                 </button>)                            
                             }
 
-                            <select onChange={e => setPageSize(e.target.value)}>
-                                <option value="5">5</option>
-                                <option value="5" selected>15</option>
-                                <option value="5">20</option>
+                            <select onChange={e => setSize(e.target.value)}>
+                                <option value="6">6</option>
+                                <option value="10" selected>10</option>
+                                <option value="20">20</option>
                             </select>
                         </div>
                     </div>
