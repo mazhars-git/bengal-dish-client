@@ -12,10 +12,10 @@ const ManagePd = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/items?page=${page}&size${pageSize}`)
+        fetch(`http://localhost:5000/items?page=${page}&size=${pageSize}`)
         .then(res => res.json())
         .then(data => setItemsData(data))
-    }, []);
+    }, [page, pageSize]);
 
 
     useEffect(() =>{
