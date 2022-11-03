@@ -1,3 +1,10 @@
+.data-table{
+    padding: 15px;
+}
+.deleteIcon{
+    color: red;
+}
+
 .pagination button{
     background: gray;
     border-radius: 30px;

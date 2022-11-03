@@ -55,7 +55,7 @@ const ManagePd = () => {
                         <h2 style={{color: '#fff', fontWeight: 'bold'}}>Admin Area</h2>
 
                        <div className="data-table">
-                            <table class="table table-light">
+                            <table className="table table-light">
                                 <thead>
                                     <tr>
                                     <th scope="col">Sl No</th>
@@ -73,7 +73,7 @@ const ManagePd = () => {
                                             <td>{item.item}</td>
                                             <td>{item.price}</td>
                                             <td onClick={() => handleDelete(item._id)}>
-                                                <DeleteRoundedIcon />
+                                                <DeleteRoundedIcon className="deleteIcon"/>
                                             </td>
                                         </tr>
                                         )
