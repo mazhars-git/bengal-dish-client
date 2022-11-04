@@ -2,11 +2,15 @@
     padding: 15px;
 }
 .deleteIcon{
+    color: rgb(252, 171, 49);
+}
+.deleteIcon:hover{
     color: red;
 }
 
 .pagination button{
     background: gray;
+    align-items: center;
     border-radius: 30px;
     margin: 5px;
     padding: 5px;
