@@ -7,7 +7,7 @@ const ManagePd = () => {
     const [itemsData, setItemsData] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
-    const [size, setSize] = useState(10);
+    const [size, setSize] = useState(6);
 
 
     useEffect(() => {
@@ -55,7 +55,7 @@ const ManagePd = () => {
                         <h2 style={{color: '#fff', fontWeight: 'bold'}}>Admin Area</h2>
 
                        <div className="data-table">
-                            <table className="table table-light">
+                            <table className="table table-dark">
                                 <thead>
                                     <tr>
                                     <th scope="col">Sl No</th>
@@ -85,7 +85,7 @@ const ManagePd = () => {
                     
             {/* -------------- -------Pagination Added----------------*/}
 
-                        <div className="pagination">
+                        <div className="pagination-box">
                             {
                                 [...Array(pageCount).keys()]
                                 .map(number => 
@@ -98,9 +98,9 @@ const ManagePd = () => {
                             }
 
                             <select onChange={e => setSize(e.target.value)}>
-                                <option value="6">6</option>
-                                <option value="10" selected>10</option>
-                                <option value="20">20</option>
+                                <option value="6" selected>6</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
                             </select>
                         </div>
                     </div>

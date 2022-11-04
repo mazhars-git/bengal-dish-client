@@ -1,6 +1,5 @@
-.data-table{
-    padding: 15px;
-}
+
+
 .deleteIcon{
     color: rgb(252, 171, 49);
 }
@@ -8,18 +7,27 @@
     color: red;
 }
 
-.pagination button{
+.pagination-box{
+    text-align: center;
+}
+.pagination-box button{
     background: gray;
-    align-items: center;
     border-radius: 30px;
     margin: 5px;
     padding: 5px;
     color: #fff;
     width: 40px;
     height: 40px;
-
 }
 
-.pagination .selected{
+.pagination-box .selected{
     background: red;
+}
+
+.pagination-box select{
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(255, 160, 18);
+    color: #fff;
 }
