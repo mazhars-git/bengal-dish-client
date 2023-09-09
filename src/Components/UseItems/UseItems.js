@@ -4,6 +4,8 @@ const UseItems = () =>{
 
 const [itemsData, setItemsData] = useState([]);
 
+// console.log(itemsData);
+
     useEffect(() => {
         fetch('http://localhost:5000/items')
         .then(res => res.json())

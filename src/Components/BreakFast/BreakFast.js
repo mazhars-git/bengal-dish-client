@@ -5,12 +5,13 @@ import UseItems from '../UseItems/UseItems';
 
 const BreakFast = () => {
     const [itemsData] = UseItems();
+    
     console.log(itemsData);
 
     const breakfast = itemsData.filter(function (el)
-    {
-    return el.category === "breakfast";
-    }
+        {
+            return el.category === "breakfast";
+        }
     );
     console.log(breakfast);
 
