@@ -21,7 +21,7 @@ const AddItem = () => {
     //send data to server
     
 
-    fetch('http://localhost:5000/item', {
+    fetch('https://dish-server-8cm2.onrender.com/item', {
       
       method: 'POST',
       headers: {

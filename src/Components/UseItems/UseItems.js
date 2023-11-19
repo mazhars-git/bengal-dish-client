@@ -7,7 +7,7 @@ const [itemsData, setItemsData] = useState([]);
 // console.log(itemsData);
 
     useEffect(() => {
-        fetch('http://localhost:5000/mealItems')
+        fetch('https://dish-server-8cm2.onrender.com/mealItems')
         .then(res => res.json())
         .then(data => setItemsData(data))
     }, []);

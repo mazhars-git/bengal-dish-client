@@ -13,7 +13,7 @@ const ItemDetails = (props) => {
     const [num, setNum] = useState(1);
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/item/${itemId}`)
+        fetch(`https://dish-server-8cm2.onrender.com/item/${itemId}`)
         .then(res => res.json())
         .then(data => setBooking(data))
     },[])

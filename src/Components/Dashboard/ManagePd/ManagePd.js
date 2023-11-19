@@ -11,7 +11,7 @@ const ManagePd = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product?page=${page}&size=${size}`)
+        fetch(`https://dish-server-8cm2.onrender.com/product?page=${page}&size=${size}`)
         .then(res => res.json())
         .then(data => setItemsData(data))
     }, [page, size]);
@@ -19,7 +19,7 @@ const ManagePd = () => {
     console.log(itemsData);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/itemCount')
+        fetch('https://dish-server-8cm2.onrender.com/itemCount')
         .then(res => res.json())
         .then(data => {
             const count = data.countItem;
@@ -31,7 +31,7 @@ const ManagePd = () => {
     const handleDelete= id => {
         const proceed = window.confirm("Are you sure? You want to delete this??")       
         if(proceed){
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://dish-server-8cm2.onrender.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
