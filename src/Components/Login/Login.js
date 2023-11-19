@@ -7,29 +7,29 @@ import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <section className="login-area">
-            <div className="container w-25 py-3">
-                <div className="login-content p-4">
+            <div className="container py-3">
+                <div className="login-content py-3 px-5">
                     <img src={logo} style={{width: '120px', alignItems: 'center'}} alt="" />
-                    <div class="my-3">
-                        <form class="g-3">
-                            <div class="mb-3">
-                                {/* <label for="name" class="form-label">Name</label> */}
-                                <input type="text" class="form-control" id="name" placeholder='Name' />
+                    <div className="my-3 pt-3">
+                        <form className="login-form g-3">
+                            <div className="mb-3">
+                                {/* <label for="name" className="form-label">Name</label> */}
+                                <input type="text" className="form-control" id="name" placeholder='Name' />
                             </div>
-                            <div class="mb-3">
-                                {/* <label for="email" class="form-label">Email</label> */}
-                                <input type="email" class="form-control" id="email" placeholder='Email' />
+                            <div className="mb-3">
+                                {/* <label for="email" className="form-label">Email</label> */}
+                                <input type="email" className="form-control" id="email" placeholder='Email' />
                             </div>
-                            <div class="mb-3">
-                                {/* <label for="password" class="form-label">Password</label> */}
-                                <input type="password" class="form-control" id="password" placeholder='Password' />
+                            <div className="mb-3">
+                                {/* <label for="password" className="form-label">Password</label> */}
+                                <input type="password" className="form-control" id="password" placeholder='Password' />
                             </div>
-                            <div class="mb-3">
-                                {/* <label for="re-password" class="form-label">Confirm Password</label> */}
-                                <input type="password" class="form-control" id="re-password" placeholder='Re-type Password' />
+                            <div className="mb-3">
+                                {/* <label for="re-password" className="form-label">Confirm Password</label> */}
+                                <input type="password" className="form-control" id="re-password" placeholder='Re-type Password' />
                             </div>
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-primary form-control">Sign in</button>
+                            <div className="mb-3">
+                                <button type="submit" className="btn btn-login form-control">Sign in</button>
                             </div>
                             <p className="text-center">Already have an account?</p>
                         </form>
