@@ -1,4 +1,4 @@
-.login-area{
+.login-area, .signup-area {
     background-image: url(../../images/bg-2.jpg);
     background-position: center;
     background-size: cover;
@@ -26,4 +26,13 @@
     background: rgba(201, 138, 138, 0.411);
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
+}
+
+@media only screen and (max-width: 768px){
+    .login-area .container{
+        width: 90%;
+    }
+    .login-area{
+        height: 100vh;
+    }
 }
