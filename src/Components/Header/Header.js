@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className="header-area">
             <div className="content">
-                <h1 className="text-center py-4 animate__animated animate__fadeInTopLeft">
+                <h1 className="text-center py-4">
                     Best Food Waiting For Your Belly
                 </h1>
                 <InputGroup style={{width: '25%', margin: 'auto'}} className="mb-3">
