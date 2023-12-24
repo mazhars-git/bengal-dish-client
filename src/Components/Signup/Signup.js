@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../images/logo2.png';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const Signup = () => {
     return (
-        <section className="signup-area">
+        <section className="login-area">
             <div className="container py-3">
                 <div className="login-content py-3 px-5">
                     <img src={logo} style={{ width: '120px', alignItems: 'center' }} alt="" />
@@ -28,7 +30,7 @@ const Signup = () => {
                             <div className="mb-3">
                                 <button type="submit" className="btn btn-login form-control">Sign Up</button>
                             </div>
-                            <p className="text-center">Already have an account? <Link to="/login">Login</Link> </p>
+                            <p className="text-center">Already have an account? <Link to="/login">Log in</Link> </p>
                         </form>
                     </div>
                     <Link to="/">
