@@ -28,6 +28,13 @@
     border-bottom-right-radius: 25px;
 }
 
+.btn-google{
+    background-color: #c2c0c0;
+    color: #ef233c;
+    font-weight: semi-bold;
+    font-size: 15px;
+}
+
 @media only screen and (max-width: 768px){
     .login-area .container{
         width: 90%;

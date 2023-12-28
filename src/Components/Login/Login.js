@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from '../../images/logo2.png';
+import google_icon from '../../images/google.png';
 import '../Css/Login.css';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+    
     return (
         <section className="login-area">
             <div className="container py-3">
@@ -27,7 +29,10 @@ const Login = () => {
                         </form>
                         <h4 className="text-center fst-italic">Or,</h4>
                         <div className="text-center">
-                            <button className="btn btn-secondary">Google Sign in</button>
+                            <button className="btn btn-google">
+                                <img style={{width: '15px', marginRight: '10px'}} src={google_icon} alt="google_icon" />
+                                Google Sign in
+                            </button>
                         </div>
                     </div>
                     <Link to="/">
