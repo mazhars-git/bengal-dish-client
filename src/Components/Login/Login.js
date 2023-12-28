@@ -4,8 +4,13 @@ import google_icon from '../../images/google.png';
 import '../Css/Login.css';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import app from '../../Firebase/firebase.config';
 
 const Login = () => {
+
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
     
     return (
         <section className="login-area">
