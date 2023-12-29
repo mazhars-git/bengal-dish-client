@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../images/logo2.png';
 import google_icon from '../../images/google.png';
 import '../Css/Login.css';
@@ -8,15 +8,16 @@ import app from '../../Firebase/firebase.config';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 
 const Login = () => {
-
+    const [user, setUser] = useState();
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
 
     const handleGoogleSignIn = () =>{
         signInWithPopup(auth, provider)
         .then(result =>{
-            const user = result.user;
-            console.log(user);
+            const loggedInUser = result.user;
+            console.log(loggedInUser);
+            setUser(loggedInUser);
         })
         .catch(error => {
             console.log('error: ' + error.message);
