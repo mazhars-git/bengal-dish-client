@@ -12,6 +12,17 @@ const Login = () => {
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
 
+    const handleLogin = event =>{
+        event.preventDefault();
+
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+
+    }
+
     const handleGoogleSignIn = () =>{
         signInWithPopup(auth, provider)
         .then(result =>{
@@ -30,14 +41,14 @@ const Login = () => {
                 <div className="login-content py-3 px-5">
                     <img src={logo} style={{ width: '120px', alignItems: 'center' }} alt="" />
                     <div className="my-3 pt-3">
-                        <form className="login-form g-3">
+                        <form onSubmit={handleLogin} className="login-form g-3">
                             <div className="mb-3">
                                 {/* <label for="email" className="form-label">Email</label> */}
-                                <input type="email" className="form-control" id="email" placeholder='Email' />
+                                <input type="email" className="form-control" id="email" name='email' placeholder='Email' required />
                             </div>
                             <div className="mb-3">
                                 {/* <label for="password" className="form-label">Password</label> */}
-                                <input type="password" className="form-control" id="password" placeholder='Password' />
+                                <input type="password" className="form-control" id="password" name='password' placeholder='Password' required />
                             </div>                          
                             <div className="mb-3">
                                 <button type="submit" className="btn btn-login form-control">Log in</button>
