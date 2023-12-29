@@ -4,13 +4,17 @@ import google_icon from '../../images/google.png';
 import '../Css/Login.css';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
+import { GoogleAuthProvider, getAuth } from 'firebase/auth';
 
 const Login = () => {
 
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn = () =>{
+        console.log('signIn working')
+    }
     
     return (
         <section className="login-area">
@@ -32,9 +36,11 @@ const Login = () => {
                             </div>
                             <p className="text-center">Didn't Register yet? <Link to="/signup">Sign Up</Link></p>
                         </form>
-                        <h4 className="text-center fst-italic">Or,</h4>
+
+                            <h6 className="text-center fst-italic py-2">Or use one of these</h6>
+                        
                         <div className="text-center">
-                            <button className="btn btn-google">
+                            <button onClick={handleGoogleSignIn} className="btn btn-google">
                                 <img style={{width: '15px', marginRight: '10px'}} src={google_icon} alt="google_icon" />
                                 Google Sign in
                             </button>
