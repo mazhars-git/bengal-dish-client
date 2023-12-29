@@ -5,7 +5,7 @@ import '../Css/Login.css';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
 import app from '../../Firebase/firebase.config';
-import { GoogleAuthProvider, getAuth } from 'firebase/auth';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 
 const Login = () => {
 
@@ -13,7 +13,14 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
 
     const handleGoogleSignIn = () =>{
-        console.log('signIn working')
+        signInWithPopup(auth, provider)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => {
+            console.log('error: ' + error.message);
+        })
     }
     
     return (
@@ -39,6 +46,8 @@ const Login = () => {
 
                             <h6 className="text-center fst-italic py-2">Or use one of these</h6>
                         
+                    {/* google sign in system */}
+
                         <div className="text-center">
                             <button onClick={handleGoogleSignIn} className="btn btn-google">
                                 <img style={{width: '15px', marginRight: '10px'}} src={google_icon} alt="google_icon" />
@@ -46,6 +55,9 @@ const Login = () => {
                             </button>
                         </div>
                     </div>
+
+                    {/**  link to back home */}
+
                     <Link to="/">
                         <ArrowBackIcon />
                     </Link>
