@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo2.png';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Signup = () => {
+
+    const {user} = useContext(AuthContext);
+    console.log(user);
 
     const handleSignup = (e) => {
         e.preventDefault();
