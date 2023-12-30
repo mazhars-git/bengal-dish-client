@@ -33,7 +33,7 @@ const Login = () => {
         .catch(error => {
             console.log('error: ' + error.message);
         })
-    }
+    };
     
     return (
         <section className="login-area">
@@ -53,12 +53,12 @@ const Login = () => {
                             <div className="mb-3">
                                 <button type="submit" className="btn btn-login form-control">Log in</button>
                             </div>
-                            <p className="text-center">Didn't Register yet? <Link to="/signup">Sign Up</Link></p>
                         </form>
 
+                            <p className="text-center">Didn't Register yet? <Link to="/signup">Sign Up</Link></p>
                             <h6 className="text-center fst-italic py-2">Or use one of these</h6>
                         
-                    {/* google sign in system */}
+                        {/* google sign in system */}
 
                         <div className="text-center">
                             <button onClick={handleGoogleSignIn} className="btn btn-google">
