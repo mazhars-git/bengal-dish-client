@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import logo from '../../images/logo2.png';
 import google_icon from '../../images/google.png';
 import '../Css/Login.css';
@@ -6,8 +6,11 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
 import app from '../../Firebase/firebase.config';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
+    const { signIn } = useContext(AuthContext);
+
     const [user, setUser] = useState();
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
@@ -20,7 +23,15 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-
+        signIn(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            form.reset();
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 
     const handleGoogleSignIn = () =>{
