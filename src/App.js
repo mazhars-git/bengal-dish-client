@@ -19,13 +19,14 @@ import ManagePd from './Components/Dashboard/ManagePd/ManagePd';
 import ItemDetails from './Components/ItemDetails/ItemDetails';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Signup from './Components/Signup/Signup';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute> } />
       <Route path="/managePd" element={<ManagePd />} />
       <Route path="/addItem" element={<AddItem />} />
       <Route path="/addAdmin" element={<AddAdmin />} />
