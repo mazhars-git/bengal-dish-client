@@ -7,10 +7,14 @@ import { Badge } from '@mui/material';
 import { AuthContext } from '../../Providers/AuthProviders';
 
 const MainMenu = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
-
+        logOut()
+        .then(() => {})
+        .catch(error => {
+            console.error(error);
+        })
     }
 
     return (
@@ -35,12 +39,11 @@ const MainMenu = () => {
                         <Nav.Link href="#contact">Contact</Nav.Link>
     
                         { 
-                            // user ? <>
-                            //     <Nav.Link onClick={handleLogOut}>Logout</Nav.Link>
-                            // </> 
-
-                            // : 
-
+                            user ? <>
+                                <p>{user.email}</p> 
+                                <Nav.Link onClick={handleLogOut}>Logout</Nav.Link>
+                            </> 
+                            : 
                             <Nav.Link href="/login">Login</Nav.Link>
                         }
 
