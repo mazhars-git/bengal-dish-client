@@ -11,40 +11,40 @@ const MainMenu = () => {
 
     const handleLogOut = () => {
         logOut()
-        .then(() => {})
-        .catch(error => {
-            console.error(error);
-        })
+            .then(() => { })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
     return (
         <div>
             <Navbar fixed="top" bg="light" expand="lg">
-            <Navbar.Brand href="/"><Image src={Logo} style={{ width: '10rem' }}/></Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Brand href="/"><Image src={Logo} style={{ width: '10rem' }} /></Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="ml-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px'}}
+                        style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        
                         <Nav.Link href="/checkout">
                             <Badge badgeContent={4} color="primary">
                                 <ShoppingCartOutlinedIcon color="action" />
                             </Badge>
                         </Nav.Link>
                         <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/orders">Orders</Nav.Link>
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                         <Nav.Link href="#contact">Contact</Nav.Link>
-    
-                        { 
+
+                        {
                             user ? <>
-                                <p>{user.email}</p> 
+                                <p>{user.email}</p>
                                 <Nav.Link onClick={handleLogOut}>Logout</Nav.Link>
-                            </> 
-                            : 
-                            <Nav.Link href="/login">Login</Nav.Link>
+                            </>
+                                :
+                                <Nav.Link href="/login">Login</Nav.Link>
                         }
 
                     </Nav>

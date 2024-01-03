@@ -20,13 +20,14 @@ import ItemDetails from './Components/ItemDetails/ItemDetails';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Signup from './Components/Signup/Signup';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Orders from './Components/Orders/Orders';
 
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute> } />
+      <Route path="/dashboard" element={ <PrivateRoute> <Dashboard></Dashboard> </PrivateRoute> } />
       <Route path="/managePd" element={<ManagePd />} />
       <Route path="/addItem" element={<AddItem />} />
       <Route path="/addAdmin" element={<AddAdmin />} />
@@ -37,6 +38,7 @@ function App() {
       <Route path="/checkout" element={<CheckOut />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/orders" element={<PrivateRoute><Orders /></PrivateRoute>} />
     </Routes>
   );
 }
